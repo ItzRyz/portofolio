@@ -1,10 +1,12 @@
 "use client";
 
 import { About } from "@/components/about";
+import { Education } from "@/components/education";
 
 export default function Home() {
 
-  return (<>
+  return (<main className="flex flex-col">
     <About />
-  </>);
+    <Education />
+  </main>);
 }
