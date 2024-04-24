@@ -18,7 +18,7 @@ export type NavMobileButtonProps = {
 const NavLink = (data: NavLinkProps) => {
   const scrolltoHash = function (element_id: string) {
     const element = document.getElementById(element_id)
-    element?.scrollIntoView({ behavior: "smooth", block: "end", inline: "nearest" });
+    element?.scrollIntoView({ behavior: "smooth", block: "start", inline: "nearest" });
   }
   return (
     <div onClick={() => scrolltoHash(data.url)} className='text-stone-100 hover:text-stone-300 dark:text-stone-800 dark:hover:text-stone-500 text-sm leading-4 cursor-pointer'>{data.title}</div>

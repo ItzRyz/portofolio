@@ -5,3 +5,7 @@
 body {
     @apply bg-stone-200/80 dark:bg-stone-800 h-[200vh]
 }
+
+section {
+    @apply scroll-m-14
+}
