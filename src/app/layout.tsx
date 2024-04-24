@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import { Inter, IBM_Plex_Mono } from "next/font/google";
 import "./globals.css";
-import { NavBrand, NavLink, NavLinkProps } from "@/components/ui/nav.ui";
+import { NavLinkProps } from "@/components/ui/nav.ui";
 import { ThemeProvider } from "@/components/theme-provider";
 import { ThemeButton } from "@/components/ui/theme.ui";
 import { Navbar } from "@/components/navbar";
@@ -21,9 +21,9 @@ export default function RootLayout({
 }>) {
   const NavLinkData: NavLinkProps[] = [
     { url: "about", title: "About" },
-    { url: "", title: "Education" },
-    { url: "", title: "Skill" },
-    { url: "", title: "Contact" },
+    { url: "education", title: "Education" },
+    { url: "skill", title: "Skill" },
+    { url: "contact", title: "Contact" },
     { url: "", title: "Blog" },
   ]
   return (
