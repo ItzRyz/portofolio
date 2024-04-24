@@ -1,5 +1,6 @@
 "use client";
-import React, { useEffect, useState } from 'react'
+import React, { MouseEventHandler, useEffect, useState } from 'react';
+import { IoReorderFourOutline } from "react-icons/io5";
 import Link from 'next/link'
 
 export type NavLinkProps = {
@@ -9,6 +10,9 @@ export type NavLinkProps = {
 export type NavBrandProps = {
   url?: string;
   title: string;
+}
+export type NavMobileButtonProps = {
+  functions: MouseEventHandler<HTMLButtonElement>
 }
 
 const NavLink = (data: NavLinkProps) => {
@@ -39,5 +43,10 @@ const NavBrand = (data: NavBrandProps) => {
     <Link href={data.url ? data.url : url} className='text-stone-100 dark:text-stone-800 text-sm leading-4'>{data.title}</Link>
   )
 }
+const NavMobileButton = ({ functions }: NavMobileButtonProps) => {
+  return (
+    <button className='absolute right-3 flex md:hidden p-1 rounded-md bg-stone-600 text-white text-xs z-50 hover:bg-stone-600/60' onClick={functions}><IoReorderFourOutline /></button>
+  )
+}
 
-export { NavLink, NavBrand }
+export { NavLink, NavBrand, NavMobileButton }
