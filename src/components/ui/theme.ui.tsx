@@ -19,7 +19,7 @@ const ThemeButton = () => {
     }
     return (
         <button onClick={changeThemeHandler} className='fixed bottom-5 right-5 bg-stone-600 hover:bg-stone-600/70 dark:bg-stone-400 dark:hover:bg-stone-400/70 p-2 rounded-md shadow-lg text-white dark:text-black' >
-            {themeData == "light" ? <BiSolidSun /> : <BiSolidMoon />}
+            {themeData !== "light" ? <BiSolidSun /> : <BiSolidMoon />}
         </button>
     )
 }
