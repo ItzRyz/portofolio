@@ -6,6 +6,7 @@ type NavProps = {
 }
 
 export function Navbar({ NavLinkData }: NavProps) {
+  let i: number = 0;
   return (
     <>
       <nav className="flex justify-center align-middle py-3 fixed max-w-screen-lg w-full">
@@ -13,7 +14,7 @@ export function Navbar({ NavLinkData }: NavProps) {
           <NavBrand title="Alyvazen" />
           <ul className="flex justify-end align-middle gap-3">
             {NavLinkData.map(n => (
-              <NavLink url={n.url} title={n.title} />
+              <NavLink url={n.url} title={n.title} key={i++} />
             ))}
           </ul>
         </div>

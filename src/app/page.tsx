@@ -12,7 +12,7 @@ export default function Home() {
         <div className="text-xs tracking-wide leading-5">Fullstack Developer</div>
       </div>
       <div className="w-[60%] text-justify text-sm text-stone-100 dark:text-stone-800">
-        Over the last three odd years i've had the pleasure of working with some great companies.
+        Over the last three odd years i&apos;ve had the pleasure of working with some great companies.
         working side by side to design and develop new apps and improve upon existing products. [Go, Ts, Js, PHP, Py, etc.]
       </div>
     </div>
